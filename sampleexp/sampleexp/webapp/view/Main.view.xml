@@ -35,28 +35,15 @@
         entitySet="Products"
         smartFilterId="smartFilterBar"
         tableType="ResponsiveTable"
-        useTablePersonalisation="true" 
-        useVariantManagement="false" 
+
         header="Suppliers" showRowCount="true"
         enableAutoBinding="true"
         beforeRebindTable="onBeforeRebind"
-        class="sapUiResponsiveContentPadding">
+        
+        class="sapUiResponsiveContentPadding"
+        initiallyVisibleFields="ProductID, ProductName, Supplier/City">
         <Table>
             <columns>
-                <Column>
-                    <customData>
-                        <core:CustomData key="p13nData"
-                            value='\{"columnKey": "ProductID", "leadingProperty": "ProductID"}' />
-                    </customData>                
-                    <Text text="Product ID" />
-                </Column>
-                <Column>
-                <customData>
-                        <core:CustomData key="p13nData"
-                            value='\{"columnKey": "ProductName", "leadingProperty": "ProductName"}' />
-                    </customData>
-                    <Text text="Product Name" />
-                </Column>
                 <Column>
                 <customData>
                         <core:CustomData key="p13nData"
@@ -74,15 +61,7 @@
             </columns>
             <items>
                 <ColumnListItem>
-                <cells>
-                        <Text
-                            text="{ProductID}" />
-                    </cells>
-                    <cells>
-                        <Text
-                            text="{ProductName}" />
-                    </cells>                    
-                    <cells>
+                  <cells>
                         <Text
                             text="{Supplier/SupplierID}" />
                     </cells>
